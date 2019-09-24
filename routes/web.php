@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/greeting/{call?}', function ($call = null) {
+    if ($call){
+        echo "Welcome ". $call. " to assces this website";
+    } else{
+        echo "Khong them nhap ten luon?";
+    }
+
 });
+
